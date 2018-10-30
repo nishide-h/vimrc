@@ -1,4 +1,4 @@
-set nocompatible
+"set nocompatible
 set directory=>~/tmp
 set backupdir=>~/tmp
 set clipboard+=unnamed
@@ -91,6 +91,10 @@ call plug#begin('~/.vim/plugged')
   nnoremap <silent><C-e> :NERDTreeToggle<CR>
   " 自動で閉じる
   Plug 'tpope/vim-endwise'
+  " コメントアウトを楽にするプラグイン
+  Plug 'tyru/caw.vim'
+  nmap <C-K> <Plug>(caw:hatpos:toggle)
+  vmap <C-K> <Plug>(caw:hatpos:toggle)
 call plug#end()
 
 " dein
@@ -168,12 +172,6 @@ endif
 call neobundle#begin(expand('~/.vim/bundle'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
-
-" コメントアウトを楽にするプラグイン
-NeoBundle "tyru/caw.vim.git"
-"caw:hatpos:toggle
-nmap <C-K> <Plug>(caw:hatpos:toggle)
-vmap <C-K> <Plug>(caw:hatpos:toggle)
 
 " インデントの可視化
 NeoBundle 'Yggdroot/indentLine'
