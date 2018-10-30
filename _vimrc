@@ -80,6 +80,14 @@ hi CursorLineNr ctermbg=4 ctermfg=0
 set cursorline
 hi clear CursorLine
 
+" プラグイン管理をplug.vimで行う
+" https://github.com/junegunn/vim-plug
+" 以下のコマンドをコンソールで実行し、プラグイン本体をautoloadフォルダへ入れる
+" curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+"    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+call plug#begin('~/.vim/plugged')
+call plug#end()
+
 " dein
 " Vim起動完了時にインストール
 augroup PluginInstall
