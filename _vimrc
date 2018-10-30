@@ -99,7 +99,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'Yggdroot/indentLine'
   let g:indentLine_color_term = 111
   let g:indentLine_color_gui = '#708090'
-  "let g:indentLine_char = '' "use ¦, ┆ or │
+  " let g:indentLine_char = '' "use ¦, ┆ or │
+  " slimにカラーをつける
+  Plug 'slim-template/vim-slim'
 call plug#end()
 
 " -------------------------------
@@ -116,9 +118,6 @@ endif
 call neobundle#begin(expand('~/.vim/bundle'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
-
-" slimにカラーをつける
-NeoBundle "slim-template/vim-slim"
 
 " タグバー、ファイルないのメソッド一覧を出してくれる
 NeoBundleLazy "majutsushi/tagbar", {
