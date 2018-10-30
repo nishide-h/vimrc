@@ -95,6 +95,11 @@ call plug#begin('~/.vim/plugged')
   Plug 'tyru/caw.vim'
   nmap <C-K> <Plug>(caw:hatpos:toggle)
   vmap <C-K> <Plug>(caw:hatpos:toggle)
+  " インデントの可視化
+  Plug 'Yggdroot/indentLine'
+  let g:indentLine_color_term = 111
+  let g:indentLine_color_gui = '#708090'
+  "let g:indentLine_char = '' "use ¦, ┆ or │
 call plug#end()
 
 " -------------------------------
@@ -111,12 +116,6 @@ endif
 call neobundle#begin(expand('~/.vim/bundle'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
-
-" インデントの可視化
-NeoBundle 'Yggdroot/indentLine'
-let g:indentLine_color_term = 111
-let g:indentLine_color_gui = '#708090'
-"let g:indentLine_char = '' "use ¦, ┆ or │
 
 " slimにカラーをつける
 NeoBundle "slim-template/vim-slim"
