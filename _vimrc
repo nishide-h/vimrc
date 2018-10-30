@@ -89,6 +89,8 @@ call plug#begin('~/.vim/plugged')
   " ファイルをツリー表示
   Plug 'scrooloose/nerdtree'
   nnoremap <silent><C-e> :NERDTreeToggle<CR>
+  " 自動で閉じる
+  Plug 'tpope/vim-endwise'
 call plug#end()
 
 " dein
@@ -166,9 +168,6 @@ endif
 call neobundle#begin(expand('~/.vim/bundle'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
-
-" 自動で閉じる
-NeoBundle 'tpope/vim-endwise'
 
 " コメントアウトを楽にするプラグイン
 NeoBundle "tyru/caw.vim.git"
