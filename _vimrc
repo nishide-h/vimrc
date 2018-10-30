@@ -86,6 +86,9 @@ hi clear CursorLine
 " curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 "    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 call plug#begin('~/.vim/plugged')
+  " ファイルをツリー表示
+  Plug 'scrooloose/nerdtree'
+  nnoremap <silent><C-e> :NERDTreeToggle<CR>
 call plug#end()
 
 " dein
@@ -172,10 +175,6 @@ NeoBundle "tyru/caw.vim.git"
 "caw:hatpos:toggle
 nmap <C-K> <Plug>(caw:hatpos:toggle)
 vmap <C-K> <Plug>(caw:hatpos:toggle)
-
-" ファイルをツリー表示
-NeoBundle "scrooloose/nerdtree"
-nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
 " インデントの可視化
 NeoBundle 'Yggdroot/indentLine'
