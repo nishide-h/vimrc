@@ -108,25 +108,6 @@ call plug#begin('~/.vim/plugged')
   nn <silent> <leader>t :TagbarToggle<CR>
 call plug#end()
 
-" -------------------------------
-" NeoBundle
-" -------------------------------
-if has('vim_starting')
-  if &compatible
-    set nocompatible
-  endif
-
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
-
-call neobundle#begin(expand('~/.vim/bundle'))
-
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-call neobundle#end()
-
-NeoBundleCheck
-
 " ファイル形式の検出の有効化する
 " ファイル形式別プラグインのロードを有効化する
 " ファイル形式別インデントのロードを有効化する
