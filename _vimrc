@@ -102,6 +102,10 @@ call plug#begin('~/.vim/plugged')
   " let g:indentLine_char = '' "use ¦, ┆ or │
   " slimにカラーをつける
   Plug 'slim-template/vim-slim'
+  " タグバー、ファイルないのメソッド一覧を出してくれる
+  Plug 'majutsushi/tagbar'
+  let g:tagbar_width = 40
+  nn <silent> <leader>t :TagbarToggle<CR>
 call plug#end()
 
 " -------------------------------
@@ -118,16 +122,6 @@ endif
 call neobundle#begin(expand('~/.vim/bundle'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
-
-" タグバー、ファイルないのメソッド一覧を出してくれる
-NeoBundleLazy "majutsushi/tagbar", {
-      \ "autoload": { "commands": ["TagbarToggle"] }}
-if ! empty(neobundle#get("tagbar"))
-   " Width (default 40)
-  let g:tagbar_width = 20
-  " Map for toggle
-  nn <silent> <leader>t :TagbarToggle<CR>
-endif
 
 call neobundle#end()
 
