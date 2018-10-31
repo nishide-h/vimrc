@@ -113,6 +113,9 @@ call plug#end()
 " ファイル形式別インデントのロードを有効化する
 filetype plugin indent on
 
+" ノーマルモードへのショートカット
+inoremap <silent> jj <ESC>
+
 " windowショートカット
 " http://qiita.com/tekkoc/items/98adcadfa4bdc8b5a6ca
 nnoremap s <Nop>
