@@ -80,6 +80,10 @@ hi CursorLineNr ctermbg=4 ctermfg=0
 set cursorline
 hi clear CursorLine
 
+" 全角空白をわかりやすくする
+highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=#666666
+au BufNewFile,BufRead * match ZenkakuSpace /　/
+
 " プラグイン管理をplug.vimで行う
 " https://github.com/junegunn/vim-plug
 " 以下のコマンドをコンソールで実行し、プラグイン本体をautoloadフォルダへ入れる
