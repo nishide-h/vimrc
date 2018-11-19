@@ -110,6 +110,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'majutsushi/tagbar'
   let g:tagbar_width = 40
   nn <silent> <leader>t :TagbarToggle<CR>
+  " rubocopを非同期で実行できる
+  Plug 'w0rp/ale'
 call plug#end()
 
 " ファイル形式の検出の有効化する
