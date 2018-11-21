@@ -114,6 +114,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'w0rp/ale'
   " Gitを便利に使う
   Plug 'tpope/vim-fugitive'
+  " Rails向けのコマンドを提供する
+  Plug 'tpope/vim-rails'
 call plug#end()
 
 """""vim-fugitiveを入れた追加設定
