@@ -112,7 +112,15 @@ call plug#begin('~/.vim/plugged')
   nn <silent> <leader>t :TagbarToggle<CR>
   " rubocopを非同期で実行できる
   Plug 'w0rp/ale'
+  " Gitを便利に使う
+  Plug 'tpope/vim-fugitive'
 call plug#end()
+
+"""""vim-fugitiveを入れた追加設定
+" grep検索の実行後にQuickFix Listを表示する
+autocmd QuickFixCmdPost *grep* cwindow
+" ステータス行に現在のgitブランチを表示する
+set statusline+=%{fugitive#statusline()}
 
 " ファイル形式の検出の有効化する
 " ファイル形式別プラグインのロードを有効化する
