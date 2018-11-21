@@ -112,6 +112,7 @@ call plug#begin('~/.vim/plugged')
   nn <silent> <leader>t :TagbarToggle<CR>
   " rubocopを非同期で実行できる
   Plug 'w0rp/ale'
+  let g:ale_sign_column_always = 1
   " Gitを便利に使う
   Plug 'tpope/vim-fugitive'
   " Rails向けのコマンドを提供する
